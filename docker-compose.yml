@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "80:5000"
+    volumes:
+     - .:/app
+    environment:
+      - CLIENT_SECRET=<<REDACTED>>
+      - CLIENT_ID=9c9d3f4beecc739d1a94
+      - OAUTHLIB_INSECURE_TRANSPORT=1
